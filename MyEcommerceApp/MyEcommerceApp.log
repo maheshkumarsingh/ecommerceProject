@@ -576,3 +576,281 @@ com.app.exception.BusinessException: Cost cant be 00.0
 [main] 2021-08-18 00:00:39 INFO  com.app.Main  - Add details about the product
 [main] 2021-08-18 00:00:39 INFO  com.app.Main  - Enter Product Name
 [main] 2021-08-18 00:00:51 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-18 10:21:53 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 10:21:53 INFO  com.app.Main  - --------------------------------------
+[main] 2021-08-18 10:21:53 INFO  com.app.Main  - 
+1)For Employee
+2)For Customer
+[main] 2021-08-18 10:21:57 INFO  com.app.Main  - Hello employee Please Login!
+
+[main] 2021-08-18 10:21:57 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 10:22:00 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 10:22:03 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-18 10:22:03 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-18 10:22:03 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-18 10:22:09 INFO  com.app.Main  - View All Products 
+[main] 2021-08-18 10:24:43 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 10:24:43 INFO  com.app.Main  - --------------------------------------
+[main] 2021-08-18 10:24:43 INFO  com.app.Main  - 
+1)For Employee
+2)For Customer
+[main] 2021-08-18 10:24:45 INFO  com.app.Main  - Hello employee Please Login!
+
+[main] 2021-08-18 10:24:45 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 10:24:49 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 10:24:51 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-18 10:24:51 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-18 10:24:51 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-18 10:24:54 INFO  com.app.Main  - Add details about the product
+[main] 2021-08-18 10:24:54 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-18 10:24:57 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-18 10:25:26 INFO  com.app.Main  - View All Products 
+[main] 2021-08-18 13:04:33 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:04:33 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:04:33 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:04:38 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:04:48 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:04:50 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:04:55 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:05:06 WARN  com.app.Main  - User Not Created:
+com.app.exception.BusinessException: First and Last Name Should be only aplbhabets
+	at com.app.UserServiceImpl.UserServiceImpl.createUser(UserServiceImpl.java:18)
+	at com.app.Main.main(Main.java:128)
+[main] 2021-08-18 13:05:06 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:05:06 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:05:06 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:06:05 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:06:05 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:06:05 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:06:08 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:06:16 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:06:19 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:06:24 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:06:28 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:06:28 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:06:28 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:09:15 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:09:15 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:09:15 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:09:22 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:09:45 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:09:49 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:09:51 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:10:12 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:10:12 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:10:12 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:10:56 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:10:56 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:10:56 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:14:52 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:14:52 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:14:52 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:15:04 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:15:14 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:15:17 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:15:19 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:15:24 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:15:24 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:15:24 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:15:30 INFO  com.app.Main  - View All Products 
+[main] 2021-08-18 13:19:33 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:19:33 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:19:33 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:19:37 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:19:44 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:19:47 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:19:51 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:19:54 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:19:54 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:19:54 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:20:10 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:20:10 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:20:10 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:20:14 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 13:21:07 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 13:21:09 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 13:21:12 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 13:21:16 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 13:21:16 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 13:21:16 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 13:21:19 INFO  com.app.Main  - View All Products 
+[main] 2021-08-18 13:51:49 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:51:49 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:51:49 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:51:52 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-18 13:51:52 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 13:51:57 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 13:52:00 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-18 13:52:00 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-18 13:52:00 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-18 13:52:00 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-18 13:52:04 INFO  com.app.Main  - Press 1-4 for Employee Menu Again
+[main] 2021-08-18 13:52:27 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:52:27 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:52:27 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:52:30 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-18 13:52:30 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 13:52:33 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 13:52:36 INFO  com.app.Main  - You are Not an employee.. if you are customer please login
+
+[main] 2021-08-18 13:52:43 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:52:43 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:52:43 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:52:47 WARN  com.app.Main  - Must have choice as 1-4
+java.lang.NumberFormatException: For input string: "mahesh217"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.app.Main.main(Main.java:32)
+[main] 2021-08-18 13:52:56 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:52:56 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:52:56 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:53:00 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-18 13:53:00 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 13:53:04 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 13:53:07 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-18 13:53:07 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-18 13:53:07 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-18 13:53:07 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-18 13:53:12 INFO  com.app.Main  - Press 1-4 for Employee Menu Again
+[main] 2021-08-18 13:53:59 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 13:53:59 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 13:53:59 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 13:54:01 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-18 13:54:01 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-18 13:54:06 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-18 13:54:09 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-18 13:54:09 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-18 13:54:09 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-18 13:54:09 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-18 13:54:12 INFO  com.app.Main  - Press 1-4 for Employee Menu Again
+[main] 2021-08-18 14:49:39 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 14:49:39 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 14:49:39 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 14:49:44 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 14:49:56 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 14:49:59 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 14:50:01 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 14:50:09 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 14:50:09 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 14:50:09 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 14:50:24 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 14:50:24 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 14:50:24 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 14:50:27 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 14:50:27 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 14:50:27 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 14:50:31 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 14:50:41 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 14:50:44 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 14:50:47 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 14:50:51 WARN  com.app.UserDAOImpl.UserDAOImpl  - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'meet2mahesh17@gmail.com' for key 'user.useremail_UNIQUE'
+[main] 2021-08-18 14:50:51 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 14:50:51 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 14:50:51 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 15:03:10 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 15:03:10 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 15:03:10 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 15:03:16 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 15:03:36 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 15:03:38 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 15:03:40 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 15:03:45 WARN  com.app.UserDAOImpl.UserDAOImpl  - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'meet2mahesh17@gmail.com' for key 'user.useremail_UNIQUE'
+[main] 2021-08-18 15:03:45 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 15:03:45 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 15:03:45 INFO  com.app.Main  - 2.View Your Cart
+[main] 2021-08-18 15:04:37 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-18 15:04:37 INFO  com.app.Main  - -------------------------
+[main] 2021-08-18 15:04:37 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-18 15:04:41 INFO  com.app.Main  - Enter Email
+[main] 2021-08-18 15:04:49 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-18 15:04:51 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-18 15:04:54 INFO  com.app.Main  - Enter password
+[main] 2021-08-18 15:04:58 WARN  com.app.UserDAOImpl.UserDAOImpl  - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'meet2mahesh17@gmail.com' for key 'user.useremail_UNIQUE'
+[main] 2021-08-18 15:04:58 INFO  com.app.Main  - What You Like to do Today
+[main] 2021-08-18 15:04:58 INFO  com.app.Main  - 1.Do Shopping 
+[main] 2021-08-18 15:04:58 INFO  com.app.Main  - 2.View Your Cart
