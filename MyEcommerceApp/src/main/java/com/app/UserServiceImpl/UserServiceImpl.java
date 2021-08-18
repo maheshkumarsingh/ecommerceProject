@@ -6,6 +6,7 @@ import com.app.UserDAO.UserDAO;
 import com.app.UserDAOImpl.UserDAOImpl;
 import com.app.UserService.UserService;
 import com.app.exception.BusinessException;
+import com.app.model.Cart;
 import com.app.model.Product;
 import com.app.model.User;
 
@@ -25,6 +26,20 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userdao.getAllUser();
 	}
+
+
+
+	@Override
+	public int checkLogin(String str) throws BusinessException {
+		if(str==null) {
+			throw new BusinessException("UserId cant be null");
+		}
+		return userdao.checkLogin(str);
+	}
+
+	
+
+
 
 	
 

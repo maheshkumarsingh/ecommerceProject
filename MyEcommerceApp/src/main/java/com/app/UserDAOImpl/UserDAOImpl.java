@@ -14,7 +14,10 @@ import com.app.EmployeeDAOImpl.EmployeeDAOImpl;
 import com.app.UserDAO.UserDAO;
 import com.app.dao.dbutil.MySqlDbConnection;
 import com.app.exception.BusinessException;
+import com.app.model.Cart;
+
 import com.app.model.Product;
+
 import com.app.model.User;
 
 public class UserDAOImpl implements UserDAO {
@@ -40,7 +43,7 @@ public class UserDAOImpl implements UserDAO {
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {
-			log.warn(e);
+			log.warn("check daoimpl");
 
 		}
 		return c;
@@ -69,6 +72,21 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return userList;
 
+	}
+
+	@Override
+	public int checkLogin(String str) throws BusinessException {
+		try (Connection connection = MySqlDbConnection.getConnection()) {
+			String sql = "select useremail from user where useremail=?";
+			PreparedStatement preparedstatement = connection.prepareStatement(sql);
+			preparedstatement.setString(1, str);
+			ResultSet resultset = preparedstatement.executeQuery();
+			if (resultset.next())
+				return 1;
+		} catch (ClassNotFoundException | SQLException e) {
+			log.warn(e);
+		}
+		return 0;
 	}
 
 }
