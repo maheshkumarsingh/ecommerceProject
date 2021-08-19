@@ -37,6 +37,12 @@ public class UserServiceImpl implements UserService {
 		return userdao.checkLogin(str);
 	}
 
+	@Override
+	public int MarkOrder(String userid) throws BusinessException {
+		
+		return userdao.MarkOrder(userid);
+	}
+
 	
 
 

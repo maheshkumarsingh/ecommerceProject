@@ -89,4 +89,18 @@ public class UserDAOImpl implements UserDAO {
 		return 0;
 	}
 
+	@Override
+	public int MarkOrder(String userid) throws BusinessException {
+		int c = 0;
+		try (Connection connection = MySqlDbConnection.getConnection()){
+			String sql="update products.order set status='shipped' where userid=?";
+			PreparedStatement preparedstatement = connection.prepareStatement(sql);
+			preparedstatement.setString(1, userid);
+			c=preparedstatement.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			log.warn("check syntax", e);
+		}
+		return c;
+	}
+
 }

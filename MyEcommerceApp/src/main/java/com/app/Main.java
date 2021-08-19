@@ -10,12 +10,18 @@ import com.app.CartUserService.CartUserService;
 import com.app.CartUserServiceImpl.CartUserServiceImpl;
 import com.app.GetProductbyidDAO.GetProductbyidDAO;
 import com.app.GetProductbyidDAOImpl.GetProductbyidDAOImpl;
+import com.app.UserDAO.UserDAO;
+import com.app.UserOrderDAO.UserOrderDAO;
+import com.app.UserOrderDAOImpl.UserOrderDAOImpl;
+import com.app.UserOrderService.UserOrderService;
+import com.app.UserOrderServiceImpl.UserOrderServiceImpl;
 import com.app.UserService.UserService;
 import com.app.UserServiceImpl.UserServiceImpl;
 import com.app.employeeService.EmployeeService;
 import com.app.employeeServiceImpl.EmployeeServiceImpl;
 import com.app.exception.BusinessException;
 import com.app.model.Cart;
+import com.app.model.Order;
 import com.app.model.Product;
 import com.app.model.User;
 
@@ -25,9 +31,10 @@ public class Main {
 	public static void main(String[] args) {
 		EmployeeService employeeservice = new EmployeeServiceImpl();
 		UserService userservice = new UserServiceImpl();
-		Product product = new Product();
+
 		CartUserService cartuserservice = new CartUserServiceImpl();
 		GetProductbyidDAO getproductbyiddao = new GetProductbyidDAOImpl();
+		UserOrderService userorderservice = new UserOrderServiceImpl();
 
 		Scanner sc = new Scanner(System.in);
 		int option = 0;
@@ -54,6 +61,7 @@ public class Main {
 					log.info("2)View All product");
 					log.info("3)Delete a product from product list");
 					log.info("4)View Users");
+					log.info("5) Process Orders by userid");
 					int key = 0;
 					do {
 						try {
@@ -63,8 +71,8 @@ public class Main {
 						}
 						switch (key) {
 						case 1:
-							log.info("Add details about the product");
-
+							log.info("Add details about the product\n");
+							Product product = new Product();
 							log.info("Enter Product Name");
 							product.setPname(sc.nextLine());
 							log.info("Enter Product Cost");
@@ -77,13 +85,14 @@ public class Main {
 							} catch (BusinessException e) {
 								log.warn("Product Not Created:", e);
 							}
+							log.info("Choose 1-4 Again");
 
 							break;
 						case 2:
-							log.info("View All Products ");
+							log.info("View All Products\n");
 							try {
 								List<Product> productlist = employeeservice.getAllProduct();
-								System.out.println("List of Products");
+
 								for (Product product1 : productlist) {
 									System.out.println(product1);
 								}
@@ -93,7 +102,6 @@ public class Main {
 							}
 							break;
 						case 3:
-
 							System.out.println("Enter a product id to delete");
 							int id = Integer.parseInt(sc.nextLine());
 							try {
@@ -103,9 +111,10 @@ public class Main {
 							} catch (BusinessException e) {
 								System.out.println(e);
 							}
+							log.info("Choose 1-4 Again");
 							break;
 						case 4:
-							System.out.println("Users are:");
+							System.out.println("Users are:\n");
 							try {
 								List<User> user = userservice.getAllUser();
 								for (User user2 : user) {
@@ -115,11 +124,32 @@ public class Main {
 								log.info(e);
 
 							}
+						case 5:
+							System.out.println("Users are:\n");
+							try {
+								List<User> user = userservice.getAllUser();
+								for (User user2 : user) {
+									System.out.println(user2);
+								}
+							} catch (BusinessException e) {
+								log.info(e);
+
+							}
+							log.info("Please select(copy from above) userid to process the orders..");
+							String str=sc.nextLine();
+							try {
+								if(userservice.MarkOrder(str)==1) {
+									System.out.println("Marked as shipped");
+								}
+							} catch (BusinessException e) {
+								log.info("cannot mark");
+							}
+							break;
 						default:
-							log.info("Press 1-4 for Employee Menu Again");
+							log.info("Employee Menu Again\n");
 							break;
 						}
-					} while (key <= 3);
+					} while (key <= 5);
 				} else {
 					log.info("You are Not an employee.. if you are customer please login\n");
 				}
@@ -144,10 +174,10 @@ public class Main {
 
 					try {
 						if (userservice.createUser(user) == 1) {
-							System.out.println("User added successfully.. Please login");
+							System.out.println("User added successfully.. Please login\n");
 							System.out.println(user);
 						} else {
-							log.info("You have registered Earlier Please login");
+							log.info("You have registered Earlier Please login\n");
 						}
 
 					} catch (BusinessException e) {
@@ -164,7 +194,7 @@ public class Main {
 				User user = new User();
 				try {
 					if (userservice.checkLogin(userid) == 1) {
-						log.info("------Welcome-----");
+						log.info("Welcome to ApniDukan App\n");
 						int option1 = 0;
 						do {
 							log.info("1. View Products");
@@ -178,11 +208,9 @@ public class Main {
 							}
 							switch (option1) {
 							case 1:
-								log.info("Products are-");
-								log.info("View All Products ");
 								try {
 									List<Product> productlist = employeeservice.getAllProduct();
-									System.out.println("List of Products");
+									System.out.println("List of Products\n");
 									for (Product product1 : productlist) {
 										System.out.println(product1);
 									}
@@ -193,9 +221,19 @@ public class Main {
 
 								break;
 							case 2:
-								log.info("Select Product Id to add product into cart");
+								log.info("Select Product Id to add product into cart\n");
 								int id = 0;
 								Cart cart = new Cart();
+								try {
+									List<Product> productlist = employeeservice.getAllProduct();
+									System.out.println("List of Products\n");
+									for (Product product1 : productlist) {
+										System.out.println(product1);
+									}
+								} catch (BusinessException e) {
+									log.info(e);
+
+								}
 
 								try {
 									id = Integer.parseInt(sc.nextLine());
@@ -210,21 +248,85 @@ public class Main {
 									log.info(e);
 
 								}
+								break;
+							case 3:
+								int total = 0;
+								log.info("Your cart has these products\n");
+								List<Cart> cartList = cartuserservice.getcartbyuserid(userid);
+								for (Cart cart2 : cartList) {
+									total += cart2.getProduct().getCost();
+									System.out.println(cart2);
+								}
+								System.out.println("\nTotal is:- " + total);
+								log.info("1)Procced to Buy these Products");
+								log.info("2)Continue Shopping\n");
+								int choice = 0;
+								try {
+									choice = Integer.parseInt(sc.nextLine());
+								} catch (NumberFormatException e) {
+									log.info(e);
+								}
+								switch (choice) {
+								case 1:
+									log.info("-----Order-------");
+									if (userorderservice.CarttoOrder(userid) == 1) {
+										log.info("Inserted into order");
+										UserOrderDAO userorderdao=new UserOrderDAOImpl();
+										List<Order> order = userorderdao.getProductid(userid);
+										int count = 0;
+										for (Order order2 : order) {
+											count++;
+											System.out.println(order2);
+										}
+										log.info("\n1. Buy");
+										log.info("2.Back To Shopping");
+										int put = Integer.parseInt(sc.nextLine());
+										if (put == 1) {
+											log.info("\n Your Order is Placed You will get your Product in " + count
+													+ " days");
+										}
 
+									} else {
+
+										UserOrderDAO userorderdao = new UserOrderDAOImpl();
+										List<Order> order = userorderdao.getProductid(userid);
+										int count = 0;
+										for (Order order2 : order) {
+											count++;
+											System.out.println(order2);
+
+										}
+										log.info("\n1. Buy");
+										log.info("2.Back To Shopping");
+										int put = Integer.parseInt(sc.nextLine());
+										if (put == 1) {
+											log.info("\n Your Order is Placed You will get your Product in " + count
+													+ " days");
+
+										}
+									}
+
+									break;
+
+								default:
+									break;
+								}
+								break;
 							default:
+								log.info("Back to Main Menu\n");
 								break;
 							}
 
 						} while (option1 != 4);
 					} else {
-						log.info("User Id doesnot exist Please Register");
+						log.info("User Id doesnot exist Please Register\n");
 					}
 				} catch (BusinessException e) {
 					log.warn(e);
 				}
 				break;
 			default:
-				log.info("Internal Problem Occured Please contact admin");
+				log.info("Thank You for Using ApniDukan App!");
 				break;
 			}
 		} while (option != 4);

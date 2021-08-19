@@ -40,11 +40,11 @@ public class Cart {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-
 	@Override
 	public String toString() {
-		return "Cart [cartid=" + cartid + ", username=" + username + ", product=" + product + "]";
+		return "[" + product + "]";
 	}
+
 	
 	
 
