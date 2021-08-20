@@ -54,7 +54,7 @@ public class CartUserDAOImpl implements CartUserDAO {
 	public List<Cart> getcartbyuserid(String userid) throws BusinessException {
 		List<Cart> cartList = new ArrayList<>();
 		try (Connection connection = MySqlDbConnection.getConnection()) {
-			String sql = "select cartid,username, pname, cost from cart c JOIN productdetail p on c.productid=p.id where c.username=?";
+			String sql = "select cartid,username,productid,pname, cost from cart c JOIN productdetail p on c.productid=p.id where c.username=?";
 			PreparedStatement preparedstatement = connection.prepareStatement(sql);
 			preparedstatement.setString(1, userid);
 			ResultSet resultset = preparedstatement.executeQuery();
@@ -63,6 +63,7 @@ public class CartUserDAOImpl implements CartUserDAO {
 				cart.setCartid(resultset.getInt("cartid"));
 				cart.setUsername(userid);
 				Product product = new Product();
+				product.setId(resultset.getInt("productid"));
 				product.setPname(resultset.getString("pname"));
 				product.setCost(resultset.getDouble("cost"));
 				cart.setProduct(product);

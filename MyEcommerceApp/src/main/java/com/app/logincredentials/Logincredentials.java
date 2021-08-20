@@ -7,5 +7,11 @@ public class Logincredentials {
 		return false;
 
 	}
+	public static boolean checkforspeacialcharacters(String str) {
+		if(str.matches("[a-zA-z]{2,10}")) {
+			return true;
+		}
+		return false;
+	}
 
 }
