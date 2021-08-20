@@ -6,10 +6,12 @@ public class User {
 	private String userpass;
 	private String fname;
 	private String lname;
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public User(int userid, String userEmail, String userpass, String fname, String lname) {
 		super();
 		this.userid = userid;
@@ -18,42 +20,51 @@ public class User {
 		this.fname = fname;
 		this.lname = lname;
 	}
+
 	public int getUserid() {
 		return userid;
 	}
+
 	public void setUserid(int userid) {
 		this.userid = userid;
 	}
+
 	public String getUserEmail() {
 		return userEmail;
 	}
+
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
 	}
+
 	public String getUserpass() {
 		return userpass;
 	}
+
 	public void setUserpass(String userpass) {
 		this.userpass = userpass;
 	}
+
 	public String getFname() {
 		return fname;
 	}
+
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
+
 	public String getLname() {
 		return lname;
 	}
+
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
+
 	@Override
 	public String toString() {
-		return "User [userid=" + userid + ", userEmail=" + userEmail + ", userpassword=" + userpass + ", firstname=" + fname
-				+ ", lastname=" + lname + "]";
+		return "User [userid=" + userid + ", userEmail=" + userEmail + " firstname=" + fname + ", lastname=" + lname
+				+ "]";
 	}
-	
-	
-	
-	}
+
+}

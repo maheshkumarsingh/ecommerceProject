@@ -2784,3 +2784,214 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'meet2mahesh1
 [main] 2021-08-19 21:02:35 INFO  com.app.Main  - 4)View Users
 [main] 2021-08-19 21:02:35 INFO  com.app.Main  - 5) Process Orders by userid
 [main] 2021-08-19 21:02:38 INFO  com.app.Main  - Please select(copy from above) userid to process the orders..
+[main] 2021-08-19 23:01:46 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:01:46 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:01:46 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:01:52 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:01:52 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:01:55 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:01:59 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:01:59 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:01:59 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:01:59 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:01:59 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:02:03 INFO  com.app.Main  - 1.Search user by user id
+[main] 2021-08-19 23:02:03 INFO  com.app.Main  - 1.Search users by user firstname
+[main] 2021-08-19 23:02:03 INFO  com.app.Main  - 1.Search users by user lastname
+[main] 2021-08-19 23:02:03 INFO  com.app.Main  - 1.Search users by user email
+[main] 2021-08-19 23:23:09 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:23:09 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:23:09 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:23:13 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:23:13 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:23:17 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:23:23 INFO  com.app.Main  - You are Not an employee.. if you are customer please login
+
+[main] 2021-08-19 23:23:23 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:23:30 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:23:30 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:23:34 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:23:38 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:23:38 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:23:38 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:23:38 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:23:38 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:23:44 INFO  com.app.Main  - 
+
+1.Search user by user id
+[main] 2021-08-19 23:23:44 INFO  com.app.Main  - 2.Search users by user firstname
+[main] 2021-08-19 23:23:44 INFO  com.app.Main  - 3.Search users by user lastname
+[main] 2021-08-19 23:23:44 INFO  com.app.Main  - 4.Search users by user email
+[main] 2021-08-19 23:23:57 INFO  com.app.Main  - com.app.exception.BusinessException: No user with firstnamemahesh
+[main] 2021-08-19 23:25:44 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:25:44 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:25:44 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:25:49 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:25:49 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:25:51 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:25:54 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:25:54 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:25:54 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:25:54 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:25:54 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:26:04 INFO  com.app.Main  - 
+
+1.Search user by user id
+[main] 2021-08-19 23:26:04 INFO  com.app.Main  - 2.Search users by user firstname
+[main] 2021-08-19 23:26:04 INFO  com.app.Main  - 3.Search users by user lastname
+[main] 2021-08-19 23:26:04 INFO  com.app.Main  - 4.Search users by user email
+[main] 2021-08-19 23:30:08 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:30:08 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:30:08 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:30:13 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:30:13 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:30:16 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:30:23 INFO  com.app.Main  - You are Not an employee.. if you are customer please login
+
+[main] 2021-08-19 23:30:23 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:30:27 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:30:27 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:30:31 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:30:34 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:30:34 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:30:34 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:30:34 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:30:34 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:30:37 INFO  com.app.Main  - 
+
+1.Search user by user id
+[main] 2021-08-19 23:30:37 INFO  com.app.Main  - 2.Search users by user firstname
+[main] 2021-08-19 23:30:37 INFO  com.app.Main  - 3.Search users by user lastname
+[main] 2021-08-19 23:30:37 INFO  com.app.Main  - 4.Search users by user email
+[main] 2021-08-19 23:35:52 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:35:52 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:35:52 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:35:57 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:35:57 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:36:00 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:36:02 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:36:02 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:36:02 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:36:02 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:36:02 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:36:07 INFO  com.app.Main  - 
+
+1.Search user by user id
+[main] 2021-08-19 23:36:07 INFO  com.app.Main  - 2.Search users by user firstname
+[main] 2021-08-19 23:36:07 INFO  com.app.Main  - 3.Search users by user lastname
+[main] 2021-08-19 23:36:07 INFO  com.app.Main  - 4.Search users by user email
+[main] 2021-08-19 23:36:26 INFO  com.app.Main  - java.lang.NumberFormatException: For input string: "meet2mahesh17@gmial.com"
+[main] 2021-08-19 23:36:26 WARN  com.app.UserSearchDAOImpl.UserSearchDAOImpl  - No user with this  is present
+[main] 2021-08-19 23:37:19 INFO  com.app.Main  - Welcome to Ecommerce App
+[main] 2021-08-19 23:37:19 INFO  com.app.Main  - -------------------------
+[main] 2021-08-19 23:37:19 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-19 23:37:25 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-19 23:37:25 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-19 23:37:28 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-19 23:37:32 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-19 23:37:32 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-19 23:37:32 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-19 23:37:32 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-19 23:37:32 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-19 23:37:35 INFO  com.app.Main  - 
+
+1.Search user by user id
+[main] 2021-08-19 23:37:35 INFO  com.app.Main  - 2.Search users by user firstname
+[main] 2021-08-19 23:37:35 INFO  com.app.Main  - 3.Search users by user lastname
+[main] 2021-08-19 23:37:35 INFO  com.app.Main  - 4.Search users by user email
+[main] 2021-08-20 08:23:44 INFO  com.app.Main  - Welcome to Ecommerce App
+
+[main] 2021-08-20 08:23:44 INFO  com.app.Main  - -------------------------
+[main] 2021-08-20 08:23:44 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-20 08:23:50 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-20 08:23:50 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-20 08:23:54 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-20 08:23:57 INFO  com.app.Main  - 1)Add a product into List
+[main] 2021-08-20 08:23:57 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-20 08:23:57 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-20 08:23:57 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-20 08:23:57 INFO  com.app.Main  - 5) Process Orders by userid
+[main] 2021-08-20 08:49:12 INFO  com.app.Main  - Welcome to Ecommerce App
+
+[main] 2021-08-20 08:49:12 INFO  com.app.Main  - -------------------------
+[main] 2021-08-20 08:49:12 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-20 08:49:20 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-20 08:49:20 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-20 08:49:26 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-20 08:49:34 INFO  com.app.Main  - You are Not an employee.. if you are customer please login
+
+[main] 2021-08-20 08:49:34 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit

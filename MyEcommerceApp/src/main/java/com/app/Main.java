@@ -15,11 +15,14 @@ import com.app.UserOrderDAO.UserOrderDAO;
 import com.app.UserOrderDAOImpl.UserOrderDAOImpl;
 import com.app.UserOrderService.UserOrderService;
 import com.app.UserOrderServiceImpl.UserOrderServiceImpl;
+import com.app.UserSearchDAO.UserSearchDAO;
+import com.app.UserSearchDAOImpl.UserSearchDAOImpl;
 import com.app.UserService.UserService;
 import com.app.UserServiceImpl.UserServiceImpl;
 import com.app.employeeService.EmployeeService;
 import com.app.employeeServiceImpl.EmployeeServiceImpl;
 import com.app.exception.BusinessException;
+import com.app.logincredentials.Logincredentials;
 import com.app.model.Cart;
 import com.app.model.Order;
 import com.app.model.Product;
@@ -35,10 +38,12 @@ public class Main {
 		CartUserService cartuserservice = new CartUserServiceImpl();
 		GetProductbyidDAO getproductbyiddao = new GetProductbyidDAOImpl();
 		UserOrderService userorderservice = new UserOrderServiceImpl();
+		UserSearchDAO usersearchdao=new UserSearchDAOImpl();
+		Logincredentials login=new Logincredentials();
 
 		Scanner sc = new Scanner(System.in);
 		int option = 0;
-		log.info("Welcome to Ecommerce App");
+		log.info("Welcome to Ecommerce App\n");
 		log.info("-------------------------");
 		do {
 			log.info("\n1)For Employee\n2)Customer Register\n3)Customer Login\n4)Exit");
@@ -56,8 +61,8 @@ public class Main {
 				String euserid = sc.nextLine();
 				log.info("Enter password\n");
 				String epass = sc.nextLine();
-				if (euserid.equals("mahesh217") && epass.equals("2170@")) {
-					log.info("1)Add a product into List");
+				if (login.EmployeeLogin(euserid, epass)) {
+					log.info("1)\nAdd a product into List");
 					log.info("2)View All product");
 					log.info("3)Delete a product from product list");
 					log.info("4)View Users");
@@ -124,6 +129,77 @@ public class Main {
 								log.info(e);
 
 							}
+							log.info("\n\n1.Search user by user id");
+							log.info("2.Search users by user firstname");
+							log.info("3.Search users by user lastname");
+							log.info("4.Search users by user email");
+							int opt1=Integer.parseInt(sc.nextLine());
+							switch (opt1) {
+							case 1:
+								int id1=0;
+								System.out.println("Enter user id to get user");
+								try {
+									id1=Integer.parseInt(sc.nextLine());
+									
+								}catch(NumberFormatException e) {
+									log.info(e);
+								}
+								try {
+									User user = usersearchdao.GetUserById(id1);
+									System.out.println(user);
+								} catch (BusinessException e) {
+									log.info(e);
+								}
+								break;
+							case 2:
+								System.out.println("Enter firstname to search user");
+								String firstname=sc.nextLine();
+								try {
+									List<User> user=usersearchdao.getUserByFirstName(firstname);
+									for (User user2 : user) {
+										System.out.println(user2);
+									}
+									
+								} catch (BusinessException e) {
+									log.info(e);
+								}
+								break;
+							case 3:
+								System.out.println("Enter lastname to search user");
+								String lastname=sc.nextLine();
+								try {
+									List<User> user=usersearchdao.getUserByLastName(lastname);
+									for (User user2 : user) {
+										System.out.println(user2);
+									}
+									
+								} catch (BusinessException e) {
+									log.info(e);
+								}
+								break;
+							case 4:
+								
+								String email="";
+								System.out.println("Enter user email to get user");
+								try {
+									email=sc.nextLine();
+									
+								}catch(NumberFormatException e) {
+									log.info(e);
+								}
+								try {
+									User user = usersearchdao.getUserByEmail(email);
+									System.out.println(user);
+								} catch (BusinessException e) {
+									log.info(e);
+								}
+								break;
+
+							default:
+								break;
+							}
+							
+							break;
 						case 5:
 							System.out.println("Users are:\n");
 							try {
