@@ -1,11 +1,8 @@
 package com.app;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import org.apache.log4j.Logger;
-
 import com.app.CartUserService.CartUserService;
 import com.app.CartUserServiceImpl.CartUserServiceImpl;
 import com.app.GetProductbyidDAO.GetProductbyidDAO;
@@ -252,7 +249,6 @@ public class Main {
 				String newuserpass = sc.nextLine();
 				if (email.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z.]+$")) {
 					User user = new User();
-
 					user.setUserEmail(email);
 					user.setFname(fname);
 					user.setLname(lname);
@@ -260,8 +256,8 @@ public class Main {
 
 					try {
 						if (userservice.createUser(user) == 1) {
-							System.out.println("User added successfully.. Please login\n");
-							System.out.println(user);
+							System.out.println("You have registerred successfully.. Please login\n");
+							//System.out.println(user);
 						} else {
 							log.info("You have registered Earlier Please login\n");
 						}

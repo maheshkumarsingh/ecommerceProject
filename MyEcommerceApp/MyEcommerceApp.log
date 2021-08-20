@@ -3597,3 +3597,77 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 [main] 2021-08-20 12:34:26 INFO  com.app.Main  - Enter Email
 [main] 2021-08-20 12:34:37 INFO  com.app.Main  - Enter FirstName
 [main] 2021-08-20 12:34:41 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-20 13:12:20 INFO  com.app.Main  - Welcome to Ecommerce Console based Shopping Application
+
+[main] 2021-08-20 13:12:20 INFO  com.app.Main  - ----------------------------------------------------------
+[main] 2021-08-20 13:12:20 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-20 13:12:32 INFO  com.app.Main  - Hello Mahesh Please Login!
+
+[main] 2021-08-20 13:12:32 INFO  com.app.Main  - Enter Employee Id:
+
+[main] 2021-08-20 13:12:42 INFO  com.app.Main  - Enter password
+
+[main] 2021-08-20 13:12:45 INFO  com.app.Main  - 
+1)Add a product into List
+[main] 2021-08-20 13:12:45 INFO  com.app.Main  - 2)View All product
+[main] 2021-08-20 13:12:45 INFO  com.app.Main  - 3)Delete a product from product list
+[main] 2021-08-20 13:12:45 INFO  com.app.Main  - 4)View Users
+[main] 2021-08-20 13:12:45 INFO  com.app.Main  - 5)Process Orders by userid and cartid
+[main] 2021-08-20 13:12:47 INFO  com.app.Main  - Add details about the product
+
+[main] 2021-08-20 13:12:47 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-20 13:13:44 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-20 13:13:52 INFO  com.app.Main  - Choose 1-4 Again
+[main] 2021-08-20 13:13:57 INFO  com.app.Main  - Add details about the product
+
+[main] 2021-08-20 13:13:57 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-20 13:14:12 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-20 13:14:16 INFO  com.app.Main  - Choose 1-4 Again
+[main] 2021-08-20 13:15:01 WARN  com.app.Main  - Must have choice as 1-3
+java.lang.NumberFormatException: For input string: "HP pen drive"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.app.Main.main(Main.java:72)
+[main] 2021-08-20 13:15:01 INFO  com.app.Main  - Add details about the product
+
+[main] 2021-08-20 13:15:01 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-20 13:15:17 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-20 13:15:21 INFO  com.app.Main  - Choose 1-4 Again
+[main] 2021-08-20 13:15:50 WARN  com.app.Main  - Must have choice as 1-3
+java.lang.NumberFormatException: For input string: "Wrangler Shirt"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at com.app.Main.main(Main.java:72)
+[main] 2021-08-20 13:15:50 INFO  com.app.Main  - Add details about the product
+
+[main] 2021-08-20 13:15:50 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-20 13:15:59 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-20 13:16:02 INFO  com.app.Main  - Choose 1-4 Again
+[main] 2021-08-20 13:16:06 INFO  com.app.Main  - Add details about the product
+
+[main] 2021-08-20 13:16:06 INFO  com.app.Main  - Enter Product Name
+[main] 2021-08-20 13:16:36 INFO  com.app.Main  - Enter Product Cost
+[main] 2021-08-20 13:16:40 INFO  com.app.Main  - Choose 1-4 Again
+[main] 2021-08-20 13:23:00 INFO  com.app.Main  - Welcome to Ecommerce Console based Shopping Application
+
+[main] 2021-08-20 13:23:00 INFO  com.app.Main  - ----------------------------------------------------------
+[main] 2021-08-20 13:23:00 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
+[main] 2021-08-20 13:23:19 INFO  com.app.Main  - Enter Email
+[main] 2021-08-20 13:23:34 INFO  com.app.Main  - Enter FirstName
+[main] 2021-08-20 13:23:38 INFO  com.app.Main  - Enter lastName
+[main] 2021-08-20 13:23:41 INFO  com.app.Main  - Enter password
+[main] 2021-08-20 13:23:49 INFO  com.app.Main  - 
+1)For Employee
+2)Customer Register
+3)Customer Login
+4)Exit
