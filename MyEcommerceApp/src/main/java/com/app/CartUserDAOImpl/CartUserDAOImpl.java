@@ -29,15 +29,17 @@ public class CartUserDAOImpl implements CartUserDAO {
 		int c = 0;
 		try (Connection connection = MySqlDbConnection.getConnection()) {
 			String sql = "insert into cart(username,productid) values (?,?)";
-			Cart cart = new Cart();
+			
 			PreparedStatement preparedstatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			preparedstatement.setString(1, userid);
 			preparedstatement.setInt(2, pid);
 			c = preparedstatement.executeUpdate();
 			if (c == 1) {
+				Cart cart = new Cart();
 				ResultSet resultset = preparedstatement.getGeneratedKeys();
 				if (resultset.next()) {
 					cart.setCartid(resultset.getInt(1));
+					
 				}
 			}
 
@@ -78,6 +80,23 @@ public class CartUserDAOImpl implements CartUserDAO {
 			throw new BusinessException("Internal error occured contact sysadmin");
 		}
 		return cartList;
+	}
+
+	@Override
+	public int deletefromcart(int pid,String userid) throws BusinessException {
+		int c = 0;
+		try (Connection connection = MySqlDbConnection.getConnection()) {
+			String sql = "delete from products.cart where cartid=?";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, pid);
+//			preparedStatement.setString(2, userid);
+			c = preparedStatement.executeUpdate();
+
+		} catch (ClassNotFoundException | SQLException e) {
+
+			log.info(e);
+		}
+		return c;
 	}
 
 }

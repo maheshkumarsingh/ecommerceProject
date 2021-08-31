@@ -38,9 +38,9 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int MarkOrder(String userid) throws BusinessException {
+	public int MarkOrder(int oid) throws BusinessException {
 		
-		return userdao.MarkOrder(userid);
+		return userdao.MarkOrder(oid);
 	}
 
 	

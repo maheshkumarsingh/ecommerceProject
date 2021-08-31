@@ -1,5 +1,7 @@
 package com.app.model;
 
+import java.io.PrintStream;
+
 public class User {
 	private int userid;
 	private String userEmail;
@@ -61,10 +63,8 @@ public class User {
 		this.lname = lname;
 	}
 
-	@Override
-	public String toString() {
-		return "User [userid=" + userid + ", userEmail=" + userEmail + " firstname=" + fname + ", lastname=" + lname
-				+ "]";
+	public void PrintStream() {
+		System.out.printf("userid = %-4d userEmail = %-30s First name = %-10s Last name = %-10s\n", userid, userEmail, fname,lname);
 	}
 
 }

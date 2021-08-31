@@ -42,9 +42,8 @@ public class Product {
 		this.cost = cost;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", pname=" + pname + ", cost=" + cost + "]";
+	public void PrintStream() {
+		System.out.printf("Productid = %-4d Product Name = %-20s Product Cost = %-10.2f\n", id, pname, cost);
 	}
 
 	

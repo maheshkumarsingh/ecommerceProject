@@ -7,7 +7,7 @@ import com.app.model.Order;
 import com.app.model.Product;
 
 public interface UserOrderDAO {
-	public int CarttoOrder(String userid) throws BusinessException;
-	public List<Order> getProductid(String userid) throws BusinessException;
+	public int CarttoOrder(String userid,int pid) throws BusinessException;
+	public List<Order> getOrderTable(String userid) throws BusinessException;
 
 }

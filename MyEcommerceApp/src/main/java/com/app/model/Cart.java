@@ -4,18 +4,18 @@ public class Cart {
 	private int cartid;
 	private String username;
 	private Product product;
-	
+
 	public Cart() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public Cart(int cartid, String username, Product product) {
 		super();
 		this.cartid = cartid;
 		this.username = username;
 		this.product = product;
 	}
-
 
 	public int getCartid() {
 		return cartid;
@@ -40,14 +40,14 @@ public class Cart {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	@Override
-	public String toString() {
-		return "[" + product + "]";
+
+	public void PrintStream() {
+		System.out.printf("Cartid = %-4d   ", cartid);
+		product.PrintStream();
 	}
 
 	
 	
-
 	
 
 }

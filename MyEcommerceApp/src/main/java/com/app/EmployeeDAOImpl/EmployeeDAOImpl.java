@@ -77,7 +77,21 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 		} catch (ClassNotFoundException | SQLException e) {
 
-			System.out.println(e);
+			log.info(e);
+		}
+		return c;
+	}
+
+	@Override
+	public int MarkorderbyEmployee(int oid) throws BusinessException {
+		int c = 0;
+		try (Connection connection = MySqlDbConnection.getConnection()){
+			String sql="update products.order set status='Shipped' where orderid=?";
+			PreparedStatement preparedstatement = connection.prepareStatement(sql);
+			preparedstatement.setInt(1, oid);
+			c=preparedstatement.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			log.warn("check syntax", e);
 		}
 		return c;
 	}

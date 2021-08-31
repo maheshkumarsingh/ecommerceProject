@@ -51,9 +51,8 @@ public class Order {
 		this.status = status;
 	}
 
-	@Override
-	public String toString() {
-		return "orderid=" + orderid + ", productid=" + productid + ", status=" + status + "";
+	public void PrintStream() {
+		System.out.printf("Orderid = %-4d Productid = %-10d Status = %-10s\n", orderid,productid,status);
 	}
 
 }

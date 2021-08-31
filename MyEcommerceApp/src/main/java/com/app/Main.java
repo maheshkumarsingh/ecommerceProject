@@ -1,13 +1,17 @@
 package com.app;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import org.apache.log4j.Logger;
 import com.app.CartUserService.CartUserService;
 import com.app.CartUserServiceImpl.CartUserServiceImpl;
+import com.app.EmployeeDAO.EmployeeDAO;
+import com.app.EmployeeDAOImpl.EmployeeDAOImpl;
 import com.app.GetProductbyidDAO.GetProductbyidDAO;
 import com.app.GetProductbyidDAOImpl.GetProductbyidDAOImpl;
 import com.app.UserDAO.UserDAO;
+import com.app.UserDAOImpl.UserDAOImpl;
 import com.app.UserOrderDAO.UserOrderDAO;
 import com.app.UserOrderDAOImpl.UserOrderDAOImpl;
 import com.app.UserOrderService.UserOrderService;
@@ -35,7 +39,9 @@ public class Main {
 		CartUserService cartuserservice = new CartUserServiceImpl();
 		GetProductbyidDAO getproductbyiddao = new GetProductbyidDAOImpl();
 		UserOrderService userorderservice = new UserOrderServiceImpl();
+		UserOrderDAO userorderdao = new UserOrderDAOImpl();
 		UserSearchDAO usersearchdao = new UserSearchDAOImpl();
+		EmployeeDAO employeedao=new EmployeeDAOImpl();
 
 		Scanner sc = new Scanner(System.in);
 		int option = 0;
@@ -81,7 +87,7 @@ public class Main {
 							try {
 								if (employeeservice.createProduct(product) == 1)
 									System.out.println("Product added successfully");
-								System.out.println(product);
+								product.PrintStream();
 
 							} catch (BusinessException e) {
 								log.warn("Product Not Created:", e);
@@ -95,7 +101,7 @@ public class Main {
 								List<Product> productlist = employeeservice.getAllProduct();
 
 								for (Product product1 : productlist) {
-									System.out.println(product1);
+									product1.PrintStream();
 								}
 							} catch (BusinessException e) {
 								log.info(e);
@@ -119,7 +125,7 @@ public class Main {
 							try {
 								List<User> user = userservice.getAllUser();
 								for (User user2 : user) {
-									System.out.println(user2);
+									user2.PrintStream();
 								}
 							} catch (BusinessException e) {
 								log.info(e);
@@ -142,7 +148,7 @@ public class Main {
 								}
 								try {
 									User user = usersearchdao.GetUserById(id1);
-									System.out.println(user);
+									user.PrintStream();
 								} catch (BusinessException e) {
 									log.info(e);
 								}
@@ -153,7 +159,7 @@ public class Main {
 								try {
 									List<User> user = usersearchdao.getUserByFirstName(firstname);
 									for (User user2 : user) {
-										System.out.println(user2);
+										user2.PrintStream();
 									}
 
 								} catch (BusinessException e) {
@@ -166,7 +172,7 @@ public class Main {
 								try {
 									List<User> user = usersearchdao.getUserByLastName(lastname);
 									for (User user2 : user) {
-										System.out.println(user2);
+										user2.PrintStream();
 									}
 
 								} catch (BusinessException e) {
@@ -185,7 +191,7 @@ public class Main {
 								}
 								try {
 									User user = usersearchdao.getUserByEmail(email);
-									System.out.println(user);
+									user.PrintStream();
 								} catch (BusinessException e) {
 									log.info(e);
 								}
@@ -201,31 +207,36 @@ public class Main {
 							try {
 								List<User> user = userservice.getAllUser();
 								for (User user2 : user) {
-									System.out.println(user2);
+									user2.PrintStream();
 								}
 							} catch (BusinessException e) {
 								log.info(e);
 
 							}
-							log.info("Please select useremail to see his/her cart");
+							log.info("\nPlease select useremail to see his/her Orders");
 							String str = sc.nextLine();
 
 							try {
-								List<Cart> cartList1 = cartuserservice.getcartbyuserid(str);
-								for (Cart cart2 : cartList1) {
+								
+								List<Order> orderList1 = userorderdao.getOrderTable(str);
+								for (Order order2: orderList1) {
 
-									System.out.println(cart2);
+									order2.PrintStream();
 								}
 							} catch (BusinessException e1) {
 								log.info(e1);
 							}
-
-							try {
-								if (userservice.MarkOrder(str) == 1) {
-									System.out.println("Marked as shipped");
+							log.info("1. Select Order id to mark it as Shipped");
+							log.info("2. Exit");
+							int option2 = Integer.parseInt(sc.nextLine());
+							if (option2 == 1) {
+								try {
+									if (employeedao.MarkorderbyEmployee(option2) == 1) {
+										System.out.println("Marked as shipped");
+									}
+								} catch (BusinessException e) {
+									log.info("cannot mark");
 								}
-							} catch (BusinessException e) {
-								log.info("cannot mark");
 							}
 							break;
 						default:
@@ -257,7 +268,7 @@ public class Main {
 					try {
 						if (userservice.createUser(user) == 1) {
 							System.out.println("You have registerred successfully.. Please login\n");
-							//System.out.println(user);
+							// System.out.println(user);
 						} else {
 							log.info("You have registered Earlier Please login\n");
 						}
@@ -295,7 +306,7 @@ public class Main {
 									List<Product> productlist = employeeservice.getAllProduct();
 									System.out.println("List of Products\n");
 									for (Product product1 : productlist) {
-										System.out.println(product1);
+										product1.PrintStream();
 									}
 								} catch (BusinessException e) {
 									log.info(e);
@@ -304,20 +315,20 @@ public class Main {
 
 								break;
 							case 2:
-								log.info("Select Product Id to add product into cart\n");
 								int id = 0;
 								Cart cart = new Cart();
 								try {
 									List<Product> productlist = employeeservice.getAllProduct();
 									System.out.println("List of Products\n");
 									for (Product product1 : productlist) {
-										System.out.println(product1);
+										product1.PrintStream();
 									}
 								} catch (BusinessException e) {
 									log.info(e);
 
 								}
 
+								log.info("Select Product Id to add product into cart\n");
 								try {
 									id = Integer.parseInt(sc.nextLine());
 
@@ -325,7 +336,7 @@ public class Main {
 									cart.setProduct(getproductbyiddao.getProductById(id));
 									if (cartuserservice.insertintocart(id, userid) == 1) {
 										log.info("Product added into cart");
-										System.out.println(cart);
+										cart.PrintStream();
 									}
 								} catch (BusinessException e) {
 									log.info(e);
@@ -338,63 +349,47 @@ public class Main {
 								List<Cart> cartList = cartuserservice.getcartbyuserid(userid);
 								for (Cart cart2 : cartList) {
 									total += cart2.getProduct().getCost();
-									System.out.println(cart2);
+									cart2.PrintStream();
 								}
 								System.out.println("\nTotal is:- " + total);
-								log.info("1)Procced to Buy these Products");
-								log.info("2)Continue Shopping\n");
-								int choice = 0;
+
+								log.info("\n1.To place order select Product Id:");
+
+								int cid = 0;
+								int cid1 = 0;
 								try {
-									choice = Integer.parseInt(sc.nextLine());
+									cid = Integer.parseInt(sc.nextLine());
+									log.info("\n1.Please Select cartid parallely with productid:");
+									cid1=Integer.parseInt(sc.nextLine());
 								} catch (NumberFormatException e) {
 									log.info(e);
 								}
-								switch (choice) {
-								case 1:
-									log.info("-----Order-------");
-									if (userorderservice.CarttoOrder(userid) == 1) {
-										log.info("1)Place Order ");
-										log.info("2)Mark order as recieved");
-										UserOrderDAO userorderdao = new UserOrderDAOImpl();
-										List<Order> order = userorderdao.getProductid(userid);
-										int count = 0;
-										for (Order order2 : order) {
-											count++;
-											System.out.println(order2);
-										}
-										log.info("\n1. Buy");
-										log.info("2.Back To Shopping");
-										int put = Integer.parseInt(sc.nextLine());
-										if (put == 1) {
-											log.info("\n Your Order is Placed You will get your Product in " + count
-													+ " days");
-										}
 
-									} else {
-
-										UserOrderDAO userorderdao = new UserOrderDAOImpl();
-										List<Order> order = userorderdao.getProductid(userid);
-										int count = 0;
-										for (Order order2 : order) {
-											count++;
-											System.out.println(order2);
-
-										}
-										log.info("\n1. Buy");
-										log.info("2.Back To Shopping");
-										int put = Integer.parseInt(sc.nextLine());
-										if (put == 1) {
-											log.info("\n Your Order is Placed You will get your Product in " + count
-													+ " days");
-
-										}
-									}
-
-									break;
-
-								default:
-									break;
+								if (userorderservice.CarttoOrder(userid, cid) == 1) {
+									
+									log.info("\nAdded into order and removing from cart paralelly \nNow pay "+total);
+									cartuserservice.deletefromcart(cid1,userid);
 								}
+								
+								
+								List<Order> orderList=userorderdao.getOrderTable(userid);
+								for (Order order : orderList) {
+									order.PrintStream();
+								}
+								log.info("\nSelect Order id to Mark Status as Recieved");
+								
+								int oid1=0;
+								try {
+									oid1 = Integer.parseInt(sc.nextLine());
+								} catch (NumberFormatException e) {
+									log.info(e);
+								}
+								
+								if(userservice.MarkOrder(oid1)==1)
+								{
+									log.info("Marked "+oid1+" as recieved");
+								}
+
 								break;
 							default:
 								log.info("Back to Main Menu\n");

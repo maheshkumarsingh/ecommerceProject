@@ -23,6 +23,12 @@ public class Logincredentials {
 			return false;
 	}
 	
+	public static boolean checkProductid(int id) {
+		if(id>0 && id<1000)
+			return true;
+		return false;
+	}
+	
 	
 	
 

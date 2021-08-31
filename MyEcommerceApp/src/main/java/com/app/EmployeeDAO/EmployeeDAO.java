@@ -9,5 +9,6 @@ public interface EmployeeDAO {
 	public int createProduct(Product product) throws BusinessException;
 	public int deleteProduct(int id) throws BusinessException;
 	public List<Product> getAllProduct() throws BusinessException;
+	public int MarkorderbyEmployee(int oid) throws BusinessException;
 
 }

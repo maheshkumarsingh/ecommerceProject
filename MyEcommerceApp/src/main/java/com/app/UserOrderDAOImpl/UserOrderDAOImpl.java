@@ -22,13 +22,14 @@ public class UserOrderDAOImpl implements UserOrderDAO {
 	private static Logger log = Logger.getLogger(UserOrderDAOImpl.class);
 
 	@Override
-	public int CarttoOrder(String userid) throws BusinessException {
+	public int CarttoOrder(String userid,int pid) throws BusinessException {
 		int c = 0;
 		try (Connection connection = MySqlDbConnection.getConnection()) {
-			String sql = "insert into products.order(userid) values(?)";
+			String sql = "insert into products.order(product_id,userid) values(?,?)";
 			Order order = new Order();
 			PreparedStatement preparedstatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-			preparedstatement.setString(1, userid);
+			preparedstatement.setInt(1, pid);
+			preparedstatement.setString(2, userid);
 			c = preparedstatement.executeUpdate();
 			if (c == 1) {
 
@@ -38,17 +39,17 @@ public class UserOrderDAOImpl implements UserOrderDAO {
 				}
 			}
 		} catch (ClassNotFoundException | SQLException e) {
-			log.info("Now Processed to Add cart into Order\n");
+			log.info(e);
 		}
 
 		return c;
 	}
 
 	@Override
-	public List<Order> getProductid(String userid) throws BusinessException {
+	public List<Order> getOrderTable(String userid) throws BusinessException {
 		List<Order> orderList = new ArrayList<>();
 		try (Connection connection = MySqlDbConnection.getConnection()) {
-			String sql = ("select orderid, userid,productid,status from products.order o join cart c on o.userid=c.username where c.username=?");
+			String sql = ("select orderid,product_id,userid,status from products.order where userid=?");
 			PreparedStatement preparedstatement = connection.prepareStatement(sql);
 			preparedstatement.setString(1, userid);
 			ResultSet resultset = preparedstatement.executeQuery();
@@ -56,18 +57,17 @@ public class UserOrderDAOImpl implements UserOrderDAO {
 				Order order = new Order();
 				order.setOrderid(resultset.getInt("orderid"));
 				order.setUsername(userid);
-				order.setProductid(resultset.getInt("productid"));
+				order.setProductid(resultset.getInt("product_id"));
 				order.setStatus(resultset.getString("status"));
 				orderList.add(order);
-				
-				
+
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {
 			log.info(e);
 		}
 		return orderList;
-		
+
 	}
 
 }

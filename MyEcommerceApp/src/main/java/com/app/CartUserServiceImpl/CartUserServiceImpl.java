@@ -26,4 +26,10 @@ public class CartUserServiceImpl implements CartUserService{
 		return cartuserdao.getcartbyuserid(userid);
 	}
 
+	@Override
+	public int deletefromcart(int pid,String userid) throws BusinessException {
+		// TODO Auto-generated method stub
+		return cartuserdao.deletefromcart(pid,userid);
+	}
+
 }

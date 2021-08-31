@@ -10,7 +10,7 @@ import com.app.model.User;
 public interface UserDAO {
 	public int createUser(User user) throws BusinessException;
 	public List<User> getAllUser() throws BusinessException;
-	public int MarkOrder(String userid) throws BusinessException;
+	public int MarkOrder(int oid) throws BusinessException;
 	public int checkLogin(String str) throws BusinessException;
 
 }
